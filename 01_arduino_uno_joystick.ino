@@ -1,5 +1,5 @@
 // Joystick Test — Arduino Uno (ATmega328P)
-// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1, SW->D2
+// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1,SW->D2
 
 #define VRX_PIN  A0
 #define VRY_PIN  A1
