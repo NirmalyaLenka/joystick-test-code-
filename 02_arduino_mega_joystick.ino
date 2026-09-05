@@ -1,5 +1,5 @@
 // Joystick Test — Arduino Mega (ATmega2560)
-// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1, SW->D22
+// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1,SW->D22
 
 #define VRX_PIN  A0
 #define VRY_PIN  A1
