@@ -1,5 +1,5 @@
 // Joystick Test — Arduino Nano (ATmega328P)
-// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1, SW->D4
+// Wiring: VCC->5V, GND->GND, VRX->A0, VRY->A1,SW->D4
 
 const int VRX = A0, VRY = A1, SW = 4;
 
