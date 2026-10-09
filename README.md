@@ -118,3 +118,4 @@ Drive a stepper motor along a camera slider rail using joystick direction. The Y
 ## License
 
 This project is released for open use. No restrictions apply.
+for diffirent board find the wiring in the code
