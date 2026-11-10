@@ -123,6 +123,35 @@ for diffirent board find the wiring in the code
 
 ---
 
+## Skills & technologies
+
+[![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white)](https://github.com/NirmalyaLenka/joystick-test-code-) · [![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white)](https://github.com/NirmalyaLenka/joystick-test-code-) · [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://github.com/NirmalyaLenka/joystick-test-code-)
+
+
+## Repository structure
+
+Key files and folders (not an exhaustive listing):
+
+- `01_arduino_uno_joystick.ino`
+- `02_arduino_mega_joystick.ino`
+- `03_arduino_nano_joystick.ino`
+- `04_esp32_joystick.ino`
+- `05_esp8266_joystick.ino`
+- `06_rpi_pico_joystick.py`
+- `07_stm32_bluepill_joystick.c`
+- `08_stm32_micropython_joystick.py`
+- `09_atmega32_joystick.c`
+- `10_pic16f877a_joystick.c`
+- `11_teensy40_joystick.ino`
+- `12_nrf52840_joystick.ino`
+- `13_samd21_arduino_zero_joystick.ino`
+- `14_lpc1768_mbed_joystick.cpp`
+- `15_attiny85_joystick.c`
+- `README.md`
+- `joystick_esp32.ino`
+- `joystick_raw_test.ino`
+
+
 ## Maintenance & Audit
 
 - **Audit date:** 10 November 2026
