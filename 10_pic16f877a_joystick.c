@@ -4,6 +4,9 @@
  */
 
 #include <xc.h>
+#include <stdint.h>
+#include <stdio.h>
+
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -14,7 +17,8 @@
 #define SW          RB0
 
 static void uart_init(void) {
-  SPBRG = 129;    // 9600 baud @ 20 MHz
+  SPBRG = 129;    // Approximately 9600 baud @ 20 MHz with BRGH=1
+  BRGH  = 1;      // High-speed asynchronous mode: 20 MHz / (16 * (129 + 1))
   TXEN  = 1;
   SPEN  = 1;
 }
@@ -29,17 +33,19 @@ static void uart_puts(const char *s) {
 }
 
 static uint16_t adc_read(uint8_t ch) {
-  ADCON0 = (uint8_t)((ch << 3) | 0x81);  // select channel, ADON=1
+  ADCON0 = (uint8_t)((ch << 3) | 0x81);  // Fosc/32, selected channel, ADON=1
   __delay_us(20);
   GO = 1;
   while (GO);
-  return ((uint16_t)ADRESH << 2) | (ADRESL >> 6);  // 10-bit result
+  // ADCON1 below selects right-justified 10-bit conversion results.
+  return ((uint16_t)ADRESH << 8) | ADRESL;
 }
 
 void main(void) {
   TRISA = 0xFF;
   TRISB = 0xFF;
-  ADCON1 = 0x80;  // all analog, Vdd/Vss reference
+  ADCON1 = 0x80;          // Right justified; Vdd/Vss reference; analog inputs enabled
+  OPTION_REGbits.RBPU = 0; // Enable PORTB weak pull-ups for the active-low SW input
 
   uart_init();
   uart_puts("Joystick Test: PIC16F877A\r\n");
