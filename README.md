@@ -154,3 +154,9 @@ There are currently no checked-in build scripts, automated tests, CI workflows o
 - **Verification:** source-level review only for this maintenance pass. The examples have not all been compiled with their respective toolchains or tested on physical hardware.
 - **Last updated:** 11 November 2026 — README accuracy pass and fixes to the Arduino Mega serial output and PIC16F877A ADC/UART setup.
 - **Maintenance:** when changing a pin, clock, ADC resolution, serial interface or dependency, update the relevant source comment and this guide together.
+
+## Contact
+
+Maintained up to 25 November 2026.
+
+If you encounter any problems, please contact [carmodbhai@gmail.com](mailto:carmodbhai@gmail.com).
